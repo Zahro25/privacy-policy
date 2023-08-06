@@ -102,5 +102,9 @@ footer {
   color: #fff;
   text-align: center;
   padding: 15px;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
