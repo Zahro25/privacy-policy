@@ -1,0 +1,106 @@
+/* Custom CSS for sidebar */
+.sidebar {
+  background-color: #343a40; /* Darker background color */
+  padding: 15px;
+  height: 100vh;
+  color: #fff; /* Text color */
+}
+
+.sidebar .nav-item {
+  margin-bottom: 10px;
+}
+
+.sidebar .nav-item:last-child {
+  margin-bottom: 0; /* Remove bottom margin for the last navigation item */
+}
+
+.sidebar .nav-link {
+  color: #f8f9fa; /* Link text color */
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.sidebar .nav-link.active {
+  background-color: #343a40; /* Darker background color */
+  color: #ffc107; /* Active link text color */
+  font-weight: bold;
+}
+
+/* Custom CSS for main content area */
+.main-content {
+  padding: 15px;
+}
+
+/* Additional styling for the main content */
+.main-content h1,
+.main-content h2 {
+  margin-top: 30px;
+}
+
+.main-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Add a subtle box-shadow effect to the sidebar on larger screens */
+@media (min-width: 768px) {
+  .sidebar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Add transitions to the sidebar links for a smoother effect */
+.sidebar .nav-link:hover {
+  color: #ffc107; /* Change link text color on hover */
+}
+
+/* Style the sidebar toggle button */
+.sidebar-toggle {
+  display: none;
+  cursor: pointer;
+  background-color: bisque;
+  padding: 15px;
+}
+
+.sidebar-toggle span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+/* Show the toggle button on small screens */
+@media (max-width: 767px) {
+  .sidebar-toggle {
+    display: block;
+  }
+
+  /* Hide the sidebar by default on small screens */
+  .sidebar {
+    display: none;
+  }
+
+  /* Show the sidebar when the button is toggled */
+  .sidebar.active {
+    display: block;
+  }
+
+  /* Shift the main content to the right to accommodate the sidebar */
+  .main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+  }
+
+  /* Adjust the main content when the sidebar is active */
+  .sidebar.active ~ .main-content {
+    margin-left: 200px; /* Adjust the width based on your sidebar width */
+  }
+}
+footer {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
